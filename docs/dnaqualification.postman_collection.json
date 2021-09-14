@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "4ec993ac-a8fb-49ac-b3bc-594a94296b7f",
+		"name": "dnaqualification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/dna/token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.cThIIoDvwdueQB468K5xDc5633seEFoqwxjF_xSJyQQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jonathan.flores.isc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3005/api/dna/token",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"dna",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stats",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvbmF0aGFuLmZsb3Jlcy5pc2NAZ21haWwuY29tIiwiaWF0IjoxNjMxNjUyMTAwLCJleHAiOjE2MzE2NTU3MDB9.zyXRT8cgTVQc5tgCRPUStag3EvHHUo_HvK6_3ZcsofM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3005/api/dna/stats",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"dna",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutationtrue",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvbmF0aGFuLmZsb3Jlcy5pc2NAZ21haWwuY29tIiwiaWF0IjoxNjMxNjUyMTAwLCJleHAiOjE2MzE2NTU3MDB9.zyXRT8cgTVQc5tgCRPUStag3EvHHUo_HvK6_3ZcsofM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\" :  [\"ATGCGA\",\"CAGTGC\",\"TAATTT\",\"AGAAGG\",\"GCGTCA\",\"TCACTG\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3005/api/dna/mutation",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"dna",
+						"mutation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutationfalse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvbmF0aGFuLmZsb3Jlcy5pc2NAZ21haWwuY29tIiwiaWF0IjoxNjMxNjUyMTAwLCJleHAiOjE2MzE2NTU3MDB9.zyXRT8cgTVQc5tgCRPUStag3EvHHUo_HvK6_3ZcsofM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\" :  [\"ATGCGA\",\"CAGTGC\",\"TAATTT\",\"AGACTG\",\"GCGTCA\",\"TCACTG\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3005/api/dna/mutation",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"dna",
+						"mutation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
